@@ -52,5 +52,5 @@ def ERANNs(sm, W, T0 = 128, N = 527):
         keras.layers.LeakyReLU(alpha=0.01),
         keras.layers.Dense(N, activation = "softmax"),#FC2
     ])
-    
+    return model
 
