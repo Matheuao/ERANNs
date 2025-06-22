@@ -10,7 +10,7 @@ Clone this repository and install the package locally using `pip`:
 
 ```bash
 git clone https://github.com/Matheuao/ERANNs.git
-cd eranns
+cd ERANNS
 pip install .
 ````
 
@@ -20,7 +20,7 @@ If you're using a platform like [Kaggle Notebooks](https://www.kaggle.com/code),
 
 ```python
 !git clone https://github.com/Matheuao/ERANNs.git
-!pip install ./eranns
+!pip install ./ERANNS
 ```
 
 ---
@@ -55,7 +55,7 @@ The `ERANNs()` function accepts the following parameters:
 ## 📁 Project Structure
 
 ```
-eranns/
+ERANNs/
 ├── eranns/
 │   ├── __init__.py       # Main interface
 │   ├── layers.py         # ARB block implementation
