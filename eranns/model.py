@@ -1,5 +1,6 @@
 import tensorflow.keras as keras
 from .layers import ARB
+from .layers import CombinedGlobalPooling
 
 def get_stride_size(sm, i):
         if i > sm:
@@ -46,7 +47,7 @@ def ERANNs(sm, W, T0 = 128, N = 527):
         ARB(stride_freq=1, stride_time=1, channels=128*W),
         ARB(stride_freq=1, stride_time=1, channels=128*W),
         #global pooling
-        keras.layers.GlobalAveragePooling2D(), # mudar depois         
+        CombinedGlobalPooling(), # mudar depois         
         #stage 5
         keras.layers.Dense(128*W),#FC1
         keras.layers.LeakyReLU(alpha=0.01),

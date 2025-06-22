@@ -1,6 +1,15 @@
-
-
 import tensorflow.keras as keras
+
+class CombinedGlobalPooling(keras.layers.Layer):
+    def __init__(self):
+        super(CombinedGlobalPooling, self).__init__()
+        self.global_avg = keras.layers.GlobalAveragePooling2D()
+        self.global_max = keras.layers.GlobalMaxPooling2D()
+
+    def call(self, inputs):
+        avg = self.global_avg(inputs)
+        max_ = self.global_max(inputs)
+        return avg + max_  
 
 class ARB(keras.layers.Layer):
     def __init__(self, stride_freq, stride_time, channels):
