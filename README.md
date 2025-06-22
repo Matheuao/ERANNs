@@ -1,6 +1,11 @@
 
 # ERANNs
-a implementation of **ERANNs** (Efficient Residual Audio Neural Networks for Aaudio Pattern Recognition). Using the Keras API from TensorFlow.
+
+An implementation of **ERANNs** (Efficient Residual Audio Neural Networks for Audio Pattern Recognition), built using the Keras API from TensorFlow.
+
+This architecture is based on the article ["ERANNs: Efficient residual audio neural networks for audio pattern recognition"](https://doi.org/10.1016/j.patrec.2022.07.012), published in *Pattern Recognition Letters*.
+
+We would like to sincerely thank and acknowledge the authors of the original work — Sergey Verbitskiy, Vladimir Berikov, and Viacheslav Vyshegorodtsev — for their valuable contribution to the field. This implementation closely follows the architectural details presented in their publication.
 
 ---
 
