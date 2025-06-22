@@ -9,7 +9,7 @@ a implementation of **ERANNs** (Efficient Residual Audio Neural Networks for Aau
 Clone this repository and install the package locally using `pip`:
 
 ```bash
-git clone https://github.com/your-username/eranns.git
+git clone https://github.com/Matheuao/ERANNs.git
 cd eranns
 pip install .
 ````
