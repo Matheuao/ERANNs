@@ -24,24 +24,24 @@ class ARB(keras.layers.Layer):
         self.bn1 = keras.layers.BatchNormalization()
         self.act1 = keras.layers.LeakyReLU(alpha=0.01)
 
-        self.pad1 = keras.layers.ZeroPadding2D(padding=(1, 1))
+        #self.pad1 = keras.layers.ZeroPadding2D(padding=(1, 1))
         self.conv1 = keras.layers.Conv2D(
             channels,
             kernel_size=(self.k1_freq, self.k1_time),
             strides=(stride_freq, stride_time),
-            padding="valid",
+            padding="same",
             use_bias=False
         )
 
         self.bn2 = keras.layers.BatchNormalization()
         self.act2 = keras.layers.LeakyReLU(alpha=0.01)
 
-        self.pad2 = keras.layers.ZeroPadding2D(padding=(self.padding_freq, self.padding_time))
+        #self.pad2 = keras.layers.ZeroPadding2D(padding=(self.padding_freq, self.padding_time))
         self.conv2 = keras.layers.Conv2D(
             channels,
             kernel_size=(self.k2_freq, self.k2_time),
             strides=(1, 1),
-            padding="valid",
+            padding="same",
             use_bias=False
         )
 
@@ -74,12 +74,12 @@ class ARB(keras.layers.Layer):
 
         x = self.bn1(x)
         x = self.act1(x)
-        x = self.pad1(x)
+        #x = self.pad1(x)
         x = self.conv1(x)
 
         x = self.bn2(x)
         x = self.act2(x)
-        x = self.pad2(x)
+        #x = self.pad2(x)
         x = self.conv2(x)
 
         return keras.layers.Add()([x, shortcut])
