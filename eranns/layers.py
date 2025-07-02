@@ -63,7 +63,7 @@ class ARB(keras.layers.Layer):
                 self.channels,
                 kernel_size=1,
                 strides=(self.stride_freq, self.stride_time),
-                padding="valid",
+                padding="same",
                 use_bias=False
             )
         else:

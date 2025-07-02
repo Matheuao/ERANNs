@@ -47,7 +47,7 @@ def ERANNs(sm, W, T0 = 128, N = 527):
         ARB(stride_freq=1, stride_time=1, channels=128*W),
         ARB(stride_freq=1, stride_time=1, channels=128*W),
         #global pooling
-        CombinedGlobalPooling(), # mudar depois         
+        CombinedGlobalPooling(),          
         #stage 5
         keras.layers.Dense(128*W),#FC1
         keras.layers.LeakyReLU(alpha=0.01),
