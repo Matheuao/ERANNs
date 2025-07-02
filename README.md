@@ -62,12 +62,16 @@ The `ERANNs()` function accepts the following parameters:
 ```
 ERANNs/
 ├── eranns/
-│   ├── __init__.py       # Main interface
-│   ├── layers.py         # ARB block implementation
-│   └── model.py          # ERANNs architecture definition
-├── setup.py              # Package setup script
-├── requirements.txt      # Dependencies
-└── README.md             # This file
+│   ├── __init__.py          # Main interface
+│   ├── layers.py            # ARB block implementation
+│   └── model.py             # ERANNs architecture definition
+├── data/
+|   ├──__init__.py           # Main interface
+|   ├──esc_50.y              # Train dataset pipeline
+|   ├──esc_50_augmented.py   # Train dataset pipeline with data augmentation(still in development)
+├── setup.py                 # Package setup script
+├── requirements.txt         # Dependencies
+└── README.md                # This file
 ```
 
 ---
